@@ -1,0 +1,48 @@
+{
+  "products": [
+      { "id": 1,
+       "name": "Huou", 
+       "image":"https://img.ntdvn.com/2020/01/woman-1807533_1280.jpg",
+       "categories": "people",
+       "description":"Huou"
+      },
+      { "id": 2,
+          "name": "Huou", 
+          "image":"https://img.ntdvn.com/2020/01/woman-1807533_1280.jpg",
+          "categories": "people",
+          "description":"Huou"
+      },
+      { "id": 3,
+          "name": "Huou", 
+          "image":"https://img.ntdvn.com/2020/01/woman-1807533_1280.jpg",
+          "categories": "people",
+          "description":"Huou"
+      },
+      { "id": 4,
+          "name": "Huou", 
+          "image":"https://img.ntdvn.com/2020/01/woman-1807533_1280.jpg",
+          "categories": "people",
+          "description":"Huou"
+      },
+      { "id": 5,
+        "image":"https://img.ntdvn.com/2020/01/woman-1807533_1280.jpg",
+          "name": "Huou", 
+          "categories": "people",
+          "description":"Huou"
+      },
+      { "id": 6,
+        "image":"https://img.ntdvn.com/2020/01/woman-1807533_1280.jpg",
+          "name": "Huou", 
+          "categories": "people",
+          "description":"Huou"
+      }
+  ],
+  "users": [
+    { "id": 1, 
+      "body": "some comment", 
+      "postId": 1 }
+  ],
+  "search": { 
+      "id":1,
+      "name": "typicode" }
+}

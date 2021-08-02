@@ -1,0 +1,36 @@
+.carousel-item{
+    height: 60% !important;
+}
+/* Header */
+/* #navbarHeader, .navbar{
+    background:rgba(8, 8, 8, 0.2) !important;
+  } */
+
+.searchForm{
+    text-align: right;
+    margin-right: 100px;
+    margin-top: -50px;
+   
+}
+
+
+  /* Header */
+.menu .nav-link  {
+    color: white;
+    width: auto;
+    font-weight: bolder;
+    font-size: 20px;
+    
+}
+
+.menu button{
+    border: none;
+}
+/* 
+
+content */
+.AddImages{
+    color: blue;
+    text-align: center;
+    padding: 20px;
+}
