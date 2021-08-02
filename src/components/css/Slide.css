@@ -1,10 +1,7 @@
 .carousel-item{
     height: 60% !important;
 }
-/* Header */
-/* #navbarHeader, .navbar{
-    background:rgba(8, 8, 8, 0.2) !important;
-  } */
+
 
 .searchForm{
     text-align: right;
@@ -26,11 +23,11 @@
 .menu button{
     border: none;
 }
-/* 
 
-content */
 .AddImages{
     color: blue;
     text-align: center;
     padding: 20px;
+    margin: auto;
 }
+

@@ -1,40 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
-import Footer from './components/footer/footer';
 import Header from './components/Header/Header';
-import Slide from './components/content/Slide';
-import Content from './components/content';
-import ProductListing from './components/content/ProductListing';
-import ProductDetail from './components/content/ProductDetail';
-import { BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
 
-// import BodyData from './components/content/search';
-
+import UsersContainer from './components/UsersContainer';
+import Footer from './components/footer/footer';
+import Slider from './components/Slide';
 function App() {
   return (
-    <div>
-
-     <Router>
+    <Provider store={store}>
+      <div className="App">
         <Header/>
-        <Slide/>
-        <Switch>
-        <Route path="/" exact component={Content} />
-        <Route path="/details/:productId" exact component={ProductDetail} />
-        <Route> 404 Not Found! </Route>
-        </Switch>
+        <Slider/>
+        <UsersContainer/>
         <Footer/>
-      </Router>
-  
+        
+      </div>
+    </Provider>
 
-
-     {/* <BodyData/> */}
-    </div>
-    
   );
 }
 
