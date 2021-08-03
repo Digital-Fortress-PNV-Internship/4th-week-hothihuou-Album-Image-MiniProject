@@ -17,7 +17,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import AnimalsDetail from './components/AnimalsDetail';
+
+import Flowers from './components/Flowes';
 
 function App() {
   return (
@@ -26,13 +27,14 @@ function App() {
         <Router>
           <Header />
           <Slider/>
-         
+  
+     
           <Switch>
             <Route path="/" exact component={UsersContainer} />
             <Route path="/travel" exact component={TravelContainer} />
             <Route path="/animal" exact component={AnimalsContainer} />
-            <Route path="/animal:id" component={AnimalsDetail}/>
             <Route path="/flower" exact component={FlowersContainer} />
+            <Route path="/flowers" exact component={Flowers} />
             <Route> 404 Not Found! </Route>
           </Switch>
           <Footer />

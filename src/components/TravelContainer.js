@@ -19,7 +19,7 @@ function TravelsContainer({ travelsData,fetchTravels  }) {
          travelsData.travels &&
          travelsData.travels.map(travel => 
           <div className="col-sm-4">
-          <div className="card" style={{ width: '18rem' }}>
+          <div className="card">
             <img  src={travel.image}  />
             <div className="card-body">
               <h5 className="card-title">{travel.name}</h5>

@@ -21,7 +21,7 @@ function UsersContainer({ userData, fetchUsers }) {
             // <div key={user.id}>
             // <Link to={`//${user.id}`}>
             <div className="col-sm-4">
-              <div className="card" style={{ width: '18rem' }}>
+              <div className="card" >
                 <img src={user.image} />
                 <div className="card-body">
                   <h5 className="card-title">{user.name}</h5>

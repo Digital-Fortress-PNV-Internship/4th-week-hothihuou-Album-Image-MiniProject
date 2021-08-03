@@ -18,7 +18,7 @@ function FlowersContainer({ flowerData, fetchFlowers }) {
          flowerData.flowers &&
          flowerData.flowers.map(flower => 
           <div className="col-sm-4">
-          <div className="card" style={{ width: '18rem' }}>
+          <div className="card">
             <img  src={flower.image}  />
             <div className="card-body">
               <h5 className="card-title">{flower.name}</h5>

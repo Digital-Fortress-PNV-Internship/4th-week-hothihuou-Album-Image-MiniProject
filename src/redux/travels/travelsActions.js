@@ -31,7 +31,7 @@ export const fetchTravels = () => {
   return (dispatch) => {
     dispatch(fetchTravelsRequest())
     axios
-      .get('  http://localhost:3000/travels')
+      .get(' http://localhost:3000/travels')
       .then(response => {
         // response.data is the travels
         const travels = response.data

@@ -16,28 +16,33 @@ class Slide extends Component {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src="https://wap102.com/wp-content/uploads/2020/03/hinh-anh-pikachu.jpg" className="d-block w-100" alt="..." />
+            <img src="https://img.ntdvn.com/2020/01/woman-1807533_1280.jpg" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
             
               <h2>I hope you like. </h2>
             </div>
           </div>
           <div className="carousel-item">
-            <img src="https://wap102.com/wp-content/uploads/2020/03/hinh-anh-pikachu.jpg" className="d-block w-100" alt="..." />
+            <img src="https://img.ntdvn.com/2020/01/woman-1807533_1280.jpg" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
             
               <h2>I hope you like</h2>
             </div>
           </div>
           <div className="carousel-item">
-            <img src="https://wap102.com/wp-content/uploads/2020/03/hinh-anh-pikachu.jpg" className="d-block w-100" alt="..." />
+            <img src="https://img.ntdvn.com/2020/01/woman-1807533_1280.jpg" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               
               <h2>I hope you like</h2>
             </div>
           </div>
+          <div className="searchForm">
+          <form className="form-inline my-2 my-lg-0">
+            <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
         </div>
-
+        </div>
       </div>
     );
   }
