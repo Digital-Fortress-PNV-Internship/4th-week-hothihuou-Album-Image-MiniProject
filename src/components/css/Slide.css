@@ -5,18 +5,20 @@
 
 .searchForm{
     text-align: right;
-    margin-right: 100px;
-    margin-top: -50px;
+    margin-left:1040px;
+    margin-top: 30px;
    
 }
 
 
   /* Header */
-.menu .nav-link  {
+.menu  a {
     color: white;
     width: auto;
     font-weight: bolder;
     font-size: 20px;
+   
+    text-decoration: none;
     
 }
 
@@ -24,10 +26,4 @@
     border: none;
 }
 
-.AddImages{
-    color: blue;
-    text-align: center;
-    padding: 20px;
-    margin: auto;
-}
 

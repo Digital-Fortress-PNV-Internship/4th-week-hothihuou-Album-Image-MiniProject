@@ -31,7 +31,7 @@ export const fetchFlowers = () => {
   return (dispatch) => {
     dispatch(fetchFlowersRequest())
     axios
-      .get('https://fakestoreapi.com/products')
+      .get('  http://localhost:3000/flowers')
       .then(response => {
         // response.data is the flowers
         const flowers = response.data

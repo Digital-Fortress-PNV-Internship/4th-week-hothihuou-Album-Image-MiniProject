@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
 import { fetchUsers } from '../redux'
 import './css/Human.css'
@@ -12,24 +13,26 @@ function UsersContainer({ userData, fetchUsers }) {
     <h2>{userData.error}</h2>
   ) : (
     <div className="container ">
-        <h1 className="jumbotron-heading ">Human</h1>
+      <h1 className="jumbotron-heading ">Human</h1>
       <div className="row">
-      {userData &&
-         userData.users &&
-         userData.users.map(user => 
-          <div className="col-sm-4">
-          <div className="card" style={{ width: '18rem' }}>
-            <img  src={user.image}  />
-            <div className="card-body">
-              <h5 className="card-title">{user.title}</h5>
-              <p className="card-text">{user.description}</p>
-              <button type="button" className="btn btn-info">View</button>
+        {userData &&
+          userData.users &&
+          userData.users.map(user =>
+            // <div key={user.id}>
+            // <Link to={`//${user.id}`}>
+            <div className="col-sm-4">
+              <div className="card" style={{ width: '18rem' }}>
+                <img src={user.image} />
+                <div className="card-body">
+                  <h5 className="card-title">{user.name}</h5>
+                  
+                  <button type="button" className="btn btn-info">View</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-         )}
-        
-        
+            // </Link>
+            // </div>
+          )}
       </div>
     </div>
 

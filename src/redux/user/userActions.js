@@ -31,7 +31,7 @@ export const fetchUsers = () => {
   return (dispatch) => {
     dispatch(fetchUsersRequest())
     axios
-      .get('https://fakestoreapi.com/products')
+      .get('  http://localhost:3000/human')
       .then(response => {
         // response.data is the users
         const users = response.data

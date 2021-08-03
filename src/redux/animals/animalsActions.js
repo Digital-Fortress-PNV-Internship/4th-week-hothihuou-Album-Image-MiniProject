@@ -31,7 +31,7 @@ export const fetchAnimals = () => {
   return (dispatch) => {
     dispatch(fetchAnimalsRequest())
     axios
-      .get('https://fakestoreapi.com/products')
+      .get('  http://localhost:3000/animals')
       .then(response => {
         // response.data is the animals
         const animals = response.data

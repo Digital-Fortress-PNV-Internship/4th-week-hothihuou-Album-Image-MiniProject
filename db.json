@@ -1,48 +1,164 @@
 {
-  "products": [
+  "human": [
       { "id": 1,
-       "name": "Huou", 
-       "image":"https://img.ntdvn.com/2020/01/woman-1807533_1280.jpg",
-       "categories": "people",
-       "description":"Huou"
+       "name": "Marry", 
+       "image":"https://images.unsplash.com/photo-1577519005828-0d09b071c8f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=315&q=80",
+       "categories": "human",
+       "description":"Real love is a mix of feelings, emotions and convictions, and the last ones don't come from the heart but from our preferences and the experiences we have in our life with our parents, brothers, friends, and even our expectations!  If you find the way to love in a healthy way it is great, but it will never be perfect as the people who are willing to sell things to us will like us to believe. So be ready for some problems as well. "
       },
       { "id": 2,
-          "name": "Huou", 
-          "image":"https://img.ntdvn.com/2020/01/woman-1807533_1280.jpg",
-          "categories": "people",
-          "description":"Huou"
+          "name": "Kyoto", 
+          "image":"https://images.unsplash.com/flagged/photo-1564484683278-a66068c53c7f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+          "categories": "human",
+          "description":"Real love is a mix of feelings, emotions and convictions, and the last ones don't come from the heart but from our preferences and the experiences we have in our life with our parents, brothers, friends, and even our expectations!  If you find the way to love in a healthy way it is great, but it will never be perfect as the people who are willing to sell things to us will like us to believe. So be ready for some problems as well. "
       },
       { "id": 3,
-          "name": "Huou", 
-          "image":"https://img.ntdvn.com/2020/01/woman-1807533_1280.jpg",
-          "categories": "people",
-          "description":"Huou"
+          "name": "Amelinda", 
+          "image":"https://images.unsplash.com/photo-1577694379674-3da6daf767ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+          "categories": "human",
+          "description":"Real love is a mix of feelings, emotions and convictions, and the last ones don't come from the heart but from our preferences and the experiences we have in our life with our parents, brothers, friends, and even our expectations!  If you find the way to love in a healthy way it is great, but it will never be perfect as the people who are willing to sell things to us will like us to believe. So be ready for some problems as well. "
       },
       { "id": 4,
-          "name": "Huou", 
-          "image":"https://img.ntdvn.com/2020/01/woman-1807533_1280.jpg",
-          "categories": "people",
-          "description":"Huou"
+          "name": "Brenna", 
+          "image":"https://images.unsplash.com/photo-1574788170925-c2586e1c510d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+          "categories": "human",
+          "description":"Real love is a mix of feelings, emotions and convictions, and the last ones don't come from the heart but from our preferences and the experiences we have in our life with our parents, brothers, friends, and even our expectations!  If you find the way to love in a healthy way it is great, but it will never be perfect as the people who are willing to sell things to us will like us to believe. So be ready for some problems as well. "
       },
       { "id": 5,
-        "image":"https://img.ntdvn.com/2020/01/woman-1807533_1280.jpg",
-          "name": "Huou", 
-          "categories": "people",
-          "description":"Huou"
+        "name": "Ceridwen", 
+        "image":"https://images.unsplash.com/photo-1618507246311-0af4030bee43?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTJ8NDg1MjkyMnx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+         
+          "categories": "human",
+          "description":"Real love is a mix of feelings, emotions and convictions, and the last ones don't come from the heart but from our preferences and the experiences we have in our life with our parents, brothers, friends, and even our expectations!  If you find the way to love in a healthy way it is great, but it will never be perfect as the people who are willing to sell things to us will like us to believe. So be ready for some problems as well. "
       },
       { "id": 6,
-        "image":"https://img.ntdvn.com/2020/01/woman-1807533_1280.jpg",
-          "name": "Huou", 
-          "categories": "people",
-          "description":"Huou"
+        
+          "name": "Annabella", 
+          "image":"https://images.unsplash.com/photo-1595290293434-555d42427e84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+          "categories": "human",
+          "description":"Real love is a mix of feelings, emotions and convictions, and the last ones don't come from the heart but from our preferences and the experiences we have in our life with our parents, brothers, friends, and even our expectations!  If you find the way to love in a healthy way it is great, but it will never be perfect as the people who are willing to sell things to us will like us to believe. So be ready for some problems as well. "
       }
   ],
-  "users": [
-    { "id": 1, 
-      "body": "some comment", 
-      "postId": 1 }
-  ],
-  "search": { 
-      "id":1,
-      "name": "typicode" }
+
+  "travels": [
+    { "id": 1,
+     "name": "Seine River", 
+     "image":"https://cdn.getyourguide.com/img/tour/5d4feceb43f60.jpeg/145.jpg",
+     "categories": "travels",
+     "description":" Paris is a developing coastal city in the central part of Vietnam and is known as one of the largest cities alongside Hanoi and Ho Chi Minh city. Visiting Da Nang, you will be astounded by the amazing natural landscape, the friendly locals and a countless number of great attractions around the city. The city is surrounded by many great attractions such as Ba Na Hills, The Marble Mountains, My Son Sanctuary and many more…"
+    },
+    { "id": 2,
+        "name": "Tour Eiffel", 
+        "image":"https://cdn.getyourguide.com/img/location/60096b5671dd9.jpeg/86.webp",
+        "categories": "travels",
+        "description":"Paris is a developing coastal city in the central part of Vietnam and is known as one of the largest cities alongside Hanoi and Ho Chi Minh city. Visiting Da Nang, you will be astounded by the amazing natural landscape, the friendly locals and a countless number of great attractions around the city. The city is surrounded by many great attractions such as Ba Na Hills, The Marble Mountains, My Son Sanctuary and many more…"
+    },
+    { "id": 3,
+        "name": "Disneyland Paris", 
+        "image":"https://cdn.getyourguide.com/img/location/2603_19562.jpg/86.webp",
+        "categories": "travels",
+        "description":"Paris is a developing coastal city in the central part of Vietnam and is known as one of the largest cities alongside Hanoi and Ho Chi Minh city. Visiting Da Nang, you will be astounded by the amazing natural landscape, the friendly locals and a countless number of great attractions around the city. The city is surrounded by many great attractions such as Ba Na Hills, The Marble Mountains, My Son Sanctuary and many more…"
+    },
+    { "id": 4,
+        "name": "Musée du Louvre", 
+        "image":"https://cdn.getyourguide.com/img/location/60096c6a8bb64.jpeg/86.webp",
+        "categories": "travels",
+        "description":"Paris is a developing coastal city in the central part of Vietnam and is known as one of the largest cities alongside Hanoi and Ho Chi Minh city. Visiting Da Nang, you will be astounded by the amazing natural landscape, the friendly locals and a countless number of great attractions around the city. The city is surrounded by many great attractions such as Ba Na Hills, The Marble Mountains, My Son Sanctuary and many more…"
+    },
+    { "id": 5,
+      
+        "name": "Château de Versailles", 
+        "image":"https://cdn.getyourguide.com/img/location/60096cee5881e.jpeg/86.webp",
+        "categories": "travels",
+        "description":"Paris is a developing coastal city in the central part of Vietnam and is known as one of the largest cities alongside Hanoi and Ho Chi Minh city. Visiting Da Nang, you will be astounded by the amazing natural landscape, the friendly locals and a countless number of great attractions around the city. The city is surrounded by many great attractions such as Ba Na Hills, The Marble Mountains, My Son Sanctuary and many more…"
+    },
+    { "id": 6,
+        "name": "Palace and gardens of Versailles", 
+        "image":"https://cdn.getyourguide.com/img/tour/5ca5f0205fa48.jpeg/68.webp",
+        "categories": "travels",
+        "description":"Paris is a developing coastal city in the central part of Vietnam and is known as one of the largest cities alongside Hanoi and Ho Chi Minh city. Visiting Da Nang, you will be astounded by the amazing natural landscape, the friendly locals and a countless number of great attractions around the city. The city is surrounded by many great attractions such as Ba Na Hills, The Marble Mountains, My Son Sanctuary and many more…"
+    }
+],
+
+  "animals": [
+    { "id": 1,
+     "name": "Dog", 
+     "image":"https://images.unsplash.com/photo-1517849845537-4d257902454a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80",
+     "categories": "animals",
+     "description":"All animals are composed of cells, surrounded by a characteristic extracellular matrix composed of collagen and elastic glycoproteins."
+    },
+    { "id": 2,
+        "name": "Elephant", 
+        "image":"https://images.unsplash.com/reserve/RFDKkrvXSHqBaWMMl4W5_Heavy%20company%20by%20Alessandro%20Desantis%20-%20Downloaded%20from%20500px_jpg.jpg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+        "categories": "animals",
+        "description":"All animals are composed of cells, surrounded by a characteristic extracellular matrix composed of collagen and elastic glycoproteins."
+    },
+    { "id": 3,
+        "name": "Birds", 
+        "image":"https://images.unsplash.com/photo-1618098750285-9402745c67e7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+        "categories": "animals",
+        "description":"All animals are composed of cells, surrounded by a characteristic extracellular matrix composed of collagen and elastic glycoproteins."
+    },
+    { "id": 4,
+        "name": "Flamingo", 
+        "image":"https://images.unsplash.com/photo-1539418561314-565804e349c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
+        "categories": "animals",
+        "description":"All animals are composed of cells, surrounded by a characteristic extracellular matrix composed of collagen and elastic glycoproteins."
+    },
+    { "id": 5,
+      
+        "name": "White Horse", 
+        "image":"https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80",
+        "categories": "animals",
+        "description":"All animals are composed of cells, surrounded by a characteristic extracellular matrix composed of collagen and elastic glycoproteins."
+    },
+    { "id": 6,
+     
+        "name": "Giraffe", 
+        "image":"https://images.unsplash.com/photo-1526226244945-39c5d1d9e61a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80",
+        "categories": "animals",
+        "description":"All animals are composed of cells, surrounded by a characteristic extracellular matrix composed of collagen and elastic glycoproteins."
+    }
+],
+
+
+"flowers": [
+  { "id": 1,
+   "name": "LAVENDER", 
+   "image":"https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/lavender-field-1595587_1920.jpg?itok=b0W1Lnix",
+   "categories": "flowers",
+   "description":"Your favorite blooms — from roses and peonies to lilies and daisies — send specific messages that you need to know."
+  },
+  { "id": 2,
+      "name": "LILACS", 
+      "image":"https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/images/photo_11437.jpg?itok=BBlDDg1N",
+      "categories": "flowers",
+      "description":"Your favorite blooms — from roses and peonies to lilies and daisies — send specific messages that you need to know."
+  },
+  { "id": 3,
+      "name": "TULIPS", 
+      "image":"https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/tulips-multicolored.jpg?itok=i0LJ3dYM",
+      "categories": "flowers",
+      "description":"Your favorite blooms — from roses and peonies to lilies and daisies — send specific messages that you need to know."
+  },
+  { "id": 4,
+      "name": "DAHLIAS", 
+      "image":"https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/dahlia-3598551_1920.jpg?itok=XZfJlur2",
+      "categories": "flowers",
+      "description":"Your favorite blooms — from roses and peonies to lilies and daisies — send specific messages that you need to know."
+  },
+  { "id": 5,
+    "name":"ZINNIAS",
+      "image": "https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/zinnias-assorted-edit.jpg?itok=FA-Rqlos", 
+      "categories": "flowers",
+      "description":"Your favorite blooms — from roses and peonies to lilies and daisies — send specific messages that you need to know."
+  },
+  { "id": 6,
+   
+      "name": "SUNFLOWERS", 
+      "image":"https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/sunflower-1627193_1920.jpg?itok=yc2JGIPb",
+      "categories": "flowers",
+      "description":"Your favorite blooms — from roses and peonies to lilies and daisies — send specific messages that you need to know."
+  }
+]
 }
