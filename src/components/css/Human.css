@@ -15,5 +15,6 @@
     margin-top: 30px;
 }
 
-
-
+.card-title{
+    text-decoration: none;
+}

@@ -19,6 +19,7 @@ import {
 } from "react-router-dom";
 
 import Flowers from './components/Flowes';
+import UserDetail from './components/detail/userDetail';
 
 function App() {
   return (
@@ -27,10 +28,11 @@ function App() {
         <Router>
           <Header />
           <Slider/>
-  
+ 
      
           <Switch>
             <Route path="/" exact component={UsersContainer} />
+            <Route path="/user/:userId" exact component={UserDetail}/>
             <Route path="/travel" exact component={TravelContainer} />
             <Route path="/animal" exact component={AnimalsContainer} />
             <Route path="/flower" exact component={FlowersContainer} />

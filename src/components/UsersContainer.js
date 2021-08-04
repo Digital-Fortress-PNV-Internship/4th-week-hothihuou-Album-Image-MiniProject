@@ -18,9 +18,9 @@ function UsersContainer({ userData, fetchUsers }) {
         {userData &&
           userData.users &&
           userData.users.map(user =>
-            // <div key={user.id}>
-            // <Link to={`//${user.id}`}>
-            <div className="col-sm-4">
+           
+            <div className="col-sm-4" key={user.id}>
+            <Link to={`/user/${user.id}`}>
               <div className="card" >
                 <img src={user.image} />
                 <div className="card-body">
@@ -29,9 +29,10 @@ function UsersContainer({ userData, fetchUsers }) {
                   <button type="button" className="btn btn-info">View</button>
                 </div>
               </div>
+              </Link>
             </div>
-            // </Link>
-            // </div>
+            
+           
           )}
       </div>
     </div>

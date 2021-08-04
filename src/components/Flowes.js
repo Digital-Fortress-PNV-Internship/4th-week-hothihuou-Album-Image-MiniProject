@@ -75,4 +75,3 @@ const CountryDetail = (props) => {
     </>
   );
 };
-
