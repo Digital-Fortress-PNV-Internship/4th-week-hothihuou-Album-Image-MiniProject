@@ -8,49 +8,42 @@ import {fetchUsersSuccess} from '../../redux/user/userActions';
 
 const UserDetail =()=> {
     const user = useSelector((state=>state.user))
-   //  const { image,name, description } = user;
+    // const { image,name, description,category } = user;
      const {userId} =useParams();
      
     const dispatch = useDispatch();
     console.log(user);
 
-    const fetchUserDetail = async () => {
+    const fetchUserDetail = async (id) => {
+
         const response = await axios
-          .get(`http://localhost:3000/human/${userId}`)
-          // .catch((err) => {
-          //   console.log("Err: ", err);
-          // });
+          .get(`http://localhost:3000/human/${id}`)
+          .catch((err) => {
+            console.log("Err: ", err);
+          });
          dispatch(fetchUsersSuccess(response.data));
       };
 
       useEffect(()=>{
         if (userId && userId !== "") fetchUserDetail(userId);
       }, [userId]);
-      console.log('xxx', Object.keys(user));
+
         return (
             <div className="ui grid container">
-              {Object.keys(user).length === 0 ? (
-                
+              {Object.keys(user.users).length === 0 ? (
                 <div>...Loading</div>
               ) : (
                 <div className="ui placeholder segment">
                   <div className="ui two column stackable center aligned grid">
-                    <div className="ui vertical divider">AND</div>
+                    <div className="ui vertical divider">Details </div>
                     <div className="middle aligned row">
                       <div className="column lp">
-                        <img className="ui fluid image" src={user.image} />
+                        <img className="ui fluid image" src={user.users.image} />
                       </div>
                       <div className="column rp">
-                        <h1>{user.name}</h1>
-                        
-                        {/* <h3 className="ui brown block header">{category}</h3> */}
-                        <p>{user.description}</p>
-                        {/* <div className="ui vertical animated button" tabIndex="0">
-                          <div className="hidden content">
-                            <i className="shop icon"></i>
-                          </div>
-                          <div className="visible content">Add to Cart</div>
-                        </div> */}
+                        <h1>{user.users.name}</h1>
+                        <h3 className="ui brown block header">{user.users.category}</h3>
+                        <p>{user.users.description}</p>                      
                       </div>
                     </div>
                   </div>

@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
-
-const Flowers=() =>{
-  const [flwoers, setFlowers] = useState([]);
+const Flowers = () => {
+  const [flowers, setFlowers] = useState([]);
   const [loading, setLoading] = useState(false);
+
   const [search, setSearch] = useState("");
-  const [filteredCountries, setFilteredCountries] = useState([]);
+  const [filteredFlowers, setFilteredFlowers] = useState([]);
 
   useEffect(() => {
     setLoading(true);
@@ -22,56 +23,63 @@ const Flowers=() =>{
       });
   }, []);
 
+
+
   useEffect(() => {
-    setFilteredCountries(
-      flwoers.filter((flowers) =>
+    setFilteredFlowers(
+      flowers.filter((flowers) =>
         flowers.name.toLowerCase().includes(search.toLowerCase())
       )
     );
-  }, [search, flwoers]);
+  }, [search, flowers]);
+
+
 
 
   if (loading) {
     return <p>Loading flowers..</p>;
   }
 
+  
   return (
     <div className="container ">
-    <h1 className="jumbotron-heading ">Flowers</h1>
-    <div className="row">
-    <form className="form-inline ">
-            <input className="form-control " type="search" placeholder="Search" aria-label="Search" onChange={(e) => setSearch(e.target.value)}
-      />
-            <button className="btn btn-outline-success " type="submit">Search</button>
-          </form>
+      <h1 className="jumbotron-heading ">Flowers</h1>
+      <div className="row">
+        <form className="form-inline ">
+          <input className="form-control " type="search" placeholder="Search" aria-label="Search" onChange={(e) => setSearch(e.target.value)}
+          />
+          <button className="btn btn-outline-success " type="submit">Search</button>
+        </form>
 
-      {filteredCountries.map((flower, idx) => (
-        <CountryDetail key={idx} {...flower} />
-      ))}
+        {filteredFlowers.map((flower, idx) => (
+          <FlowersDetail key={idx} {...flower} />
+        ))}
+      </div>
     </div>
-    </div>
-    
+
   );
 }
 export default Flowers
 
-const CountryDetail = (props) => {
-  const { name, image } = props;
+const FlowersDetail = (props) => {
+  const { id, name, image } = props;
 
   return (
     <>
      
-          <div className="col-sm-4">
-            <div className="card">
-              <img
-                src={image}
-              />
-              <div className="card-body">
-                <h5 className="card-title">{name}</h5>
-              </div>
+        <div className="col-sm-4">
+        <Link to={`/flower/${id}`}>
+          <div className="card">
+            <img
+              src={image}
+            />
+            <div className="card-body">
+              <h5 className="card-title">{name}</h5>
             </div>
           </div>
-
+           </Link>
+        </div>
+     
     </>
   );
 };

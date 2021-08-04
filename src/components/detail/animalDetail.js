@@ -8,7 +8,7 @@ import {fetchAnimalsSuccess} from '../../redux/animals/animalsActions';
 
 const AnimalsDetail =()=> {
     const animal = useSelector((state=>state.animal))
-   //  const { image,name, description } = user;
+  
      const {animalId} =useParams();
      
     const dispatch = useDispatch();
@@ -16,7 +16,7 @@ const AnimalsDetail =()=> {
 
     const fetchAnimalDetail = async () => {
         const response = await axios
-          .get(`http://localhost:3000/human/${animalId}`)
+          .get(`http://localhost:3000/animals/${animalId}`)
           // .catch((err) => {
           //   console.log("Err: ", err);
           // });
@@ -29,22 +29,22 @@ const AnimalsDetail =()=> {
       console.log('xxx', Object.keys(animal));
         return (
             <div className="ui grid container">
-              {Object.keys(animal).length === 0 ? (
+              {Object.keys(animal.animals).length === 0 ? (
                 
                 <div>...Loading</div>
               ) : (
                 <div className="ui placeholder segment">
                   <div className="ui two column stackable center aligned grid">
-                    <div className="ui vertical divider">AND</div>
+                    <div className="ui vertical divider">Details </div>
                     <div className="middle aligned row">
                       <div className="column lp">
-                        <img className="ui fluid image" src={user.image} />
+                        <img className="ui fluid image" src={animal.animals.image} />
                       </div>
                       <div className="column rp">
-                        <h1>{user.name}</h1>
+                        <h1>{animal.animals.name}</h1>
                         
                         {/* <h3 className="ui brown block header">{category}</h3> */}
-                        <p>{user.description}</p>
+                        <p>{animal.animals.description}</p>
                         {/* <div className="ui vertical animated button" tabIndex="0">
                           <div className="hidden content">
                             <i className="shop icon"></i>

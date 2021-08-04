@@ -18,9 +18,8 @@ function AnimalsContainer({ animalsData, fetchAnimals }) {
         {animalsData &&
           animalsData.animals &&
           animalsData.animals.map(animal =>
-            // <div key={id}>
-            //  <Link to={`/animal/${id}`}>
-                <div className="col-sm-4">
+                <div className="col-sm-4" key={animal.id}>
+                  <Link to={`/animal/${animal.id}`}>
                   <div className="card" >
                     <img src={animal.image} />
                     <div className="card-body">
@@ -29,9 +28,9 @@ function AnimalsContainer({ animalsData, fetchAnimals }) {
                       <button type="button" className="btn btn-info">View</button>
                     </div>
                   </div>
+                  </Link>
                 </div>
-            //   </Link>
-            // </div>
+          
          )}
             </div>
     </div>

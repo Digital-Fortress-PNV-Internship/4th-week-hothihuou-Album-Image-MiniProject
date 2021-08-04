@@ -4,47 +4,47 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 
-import {fetchUsersSuccess} from '../../redux/user/userActions';
+import {fetchFlowersSuccess} from '../../redux/flowers/flowersActions';
 
-const UserDetail =()=> {
-    const user = useSelector((state=>state.user))
-   //  const { image,name, description } = user;
-     const {userId} =useParams();
+const FlowersDetail =()=> {
+    const flower = useSelector((state=>state.flower))
+   //  const { image,name, description } = flower;
+     const {flowerId} =useParams();
      
     const dispatch = useDispatch();
-    console.log(user);
+    console.log(flower);
 
-    const fetchUserDetail = async () => {
+    const fetchflowerDetail = async () => {
         const response = await axios
-          .get(`http://localhost:3000/human/${userId}`)
+          .get(`http://localhost:3000/flowers/${flowerId}`)
           // .catch((err) => {
           //   console.log("Err: ", err);
           // });
-         dispatch(fetchUsersSuccess(response.data));
+         dispatch(fetchFlowersSuccess(response.data));
       };
 
       useEffect(()=>{
-        if (userId && userId !== "") fetchUserDetail(userId);
-      }, [userId]);
-      console.log('xxx', Object.keys(user));
+        if (flowerId && flowerId !== "") fetchflowerDetail (flowerId);
+      }, [flowerId]);
+      console.log('xxx', Object.keys(flower));
         return (
             <div className="ui grid container">
-              {Object.keys(user).length === 0 ? (
+              {Object.keys(flower.flowers).length === 0 ? (
                 
                 <div>...Loading</div>
               ) : (
                 <div className="ui placeholder segment">
                   <div className="ui two column stackable center aligned grid">
-                    <div className="ui vertical divider">AND</div>
+                    <div className="ui vertical divider">Details</div>
                     <div className="middle aligned row">
                       <div className="column lp">
-                        <img className="ui fluid image" src={user.image} />
+                        <img className="ui fluid image" src={flower.flowers.image} />
                       </div>
                       <div className="column rp">
-                        <h1>{user.name}</h1>
+                        <h1>{flower.flowers.name}</h1>
                         
                         {/* <h3 className="ui brown block header">{category}</h3> */}
-                        <p>{user.description}</p>
+                        <p>{flower.flowers.description}</p>
                         {/* <div className="ui vertical animated button" tabIndex="0">
                           <div className="hidden content">
                             <i className="shop icon"></i>
@@ -60,6 +60,4 @@ const UserDetail =()=> {
           );
 };
 
-
-
-export default UserDetail;
+export default FlowersDetail;

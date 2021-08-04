@@ -20,6 +20,9 @@ import {
 
 import Flowers from './components/Flowes';
 import UserDetail from './components/detail/userDetail';
+import AnimalsDetail from './components/detail/animalDetail';
+import FlowersDetail from './components/detail/flowerDetail';
+import TravelDetail from './components/detail/travelDetail';
 
 function App() {
   return (
@@ -28,14 +31,19 @@ function App() {
         <Router>
           <Header />
           <Slider/>
- 
-     
+       
           <Switch>
             <Route path="/" exact component={UsersContainer} />
             <Route path="/user/:userId" exact component={UserDetail}/>
+
             <Route path="/travel" exact component={TravelContainer} />
+            <Route path="/travel/:travelId" exact component={  TravelDetail}/>
+
             <Route path="/animal" exact component={AnimalsContainer} />
+            <Route path="/animal/:animalId" exact component={ AnimalsDetail}/>
+
             <Route path="/flower" exact component={FlowersContainer} />
+            <Route path="/flower/:flowerId" exact component={ FlowersDetail}/>
             <Route path="/flowers" exact component={Flowers} />
             <Route> 404 Not Found! </Route>
           </Switch>
