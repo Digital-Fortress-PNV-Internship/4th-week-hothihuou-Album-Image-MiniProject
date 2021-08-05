@@ -33,7 +33,7 @@ const Header = ()=>{
                 
                 <div className="menu"><Link to="/">Human</Link></div>
                 <div className="menu"> <Link to="/travel">Travels</Link></div>
-                <div className="menu"><Link to="/flowers"> Flowers</Link></div>
+                <div className="menu"><Link to="/flower"> Flowers</Link></div>
                 <div className="menu"> <Link to="/animal"> Animals</Link></div>
               
               

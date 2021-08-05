@@ -1,7 +1,9 @@
 import {
   FETCH_TRAVELS_REQUEST,
   FETCH_TRAVELS_SUCCESS,
-  FETCH_TRAVELS_FAILURE
+  FETCH_TRAVELS_FAILURE,
+  FETCH_TRAVELS_DELETE,
+  FETCH_TRAVELS_ADD
 } from './travelsTypes'
 
 const initialState = {
@@ -28,6 +30,17 @@ export const reducer = (state = initialState, action) => {
         loading: false,
         travels: [],
         error: action.payload
+      }
+    case FETCH_TRAVELS_DELETE:
+      return {
+        loading: false,
+        error: action.payload
+      }
+    case FETCH_TRAVELS_ADD:
+      return {
+        ...state,
+        travels: action.payload,
+        loading: false,
       }
     default: return state
   }

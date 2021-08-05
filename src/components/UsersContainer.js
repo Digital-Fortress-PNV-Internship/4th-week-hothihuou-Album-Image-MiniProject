@@ -1,12 +1,25 @@
 import React, { useEffect } from 'react'
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
-import { fetchUsers } from '../redux'
+import { fetchUsers, deleteUsers } from '../redux'
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import './css/Human.css'
+
+
 function UsersContainer({ userData, fetchUsers }) {
   useEffect(() => {
     fetchUsers()
   }, [])
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const handleDelete = (id) => {
+    if (window.confirm("Are you sure want to Delete the user?")) {
+      dispatch(deleteUsers(id));
+
+    }
+  }
   return userData.loading ? (
     <h2>Loading</h2>
   ) : userData.error ? (
@@ -15,30 +28,38 @@ function UsersContainer({ userData, fetchUsers }) {
     <div className="container ">
       <h1 className="jumbotron-heading ">Human</h1>
       <div className="row">
+        <div>
+          <button type="button" class="btn btn-primary" onClick={() => history.push("/addUser")}>ADD</button>
+        </div>
+
         {userData &&
           userData.users &&
           userData.users.map(user =>
-           
-            <div className="col-sm-4" key={user.id}>
-            <Link to={`/user/${user.id}`}>
+
+            <div className="col-sm-4" >
+
               <div className="card" >
                 <img src={user.image} />
                 <div className="card-body">
                   <h5 className="card-title">{user.name}</h5>
-                  
-                  <button type="button" className="btn btn-info">View</button>
+
+                  <Link to={`/user/${user.id}`}>
+                    <button type="button" className="btn btn-info">View</button>
+                  </Link>
+                  <button type="button" class="btn btn-danger" onClick={() => handleDelete(user.id)}>Delete</button>
                 </div>
               </div>
-              </Link>
+
             </div>
-            
-           
+
+
           )}
       </div>
     </div>
 
   )
 }
+
 
 const mapStateToProps = state => {
   return {

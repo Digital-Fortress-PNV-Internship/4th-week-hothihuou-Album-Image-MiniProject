@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-
+import { useHistory } from 'react-router-dom'
 import {fetchUsersSuccess} from '../../redux/user/userActions';
 
 const UserDetail =()=> {
@@ -12,6 +12,7 @@ const UserDetail =()=> {
      const {userId} =useParams();
      
     const dispatch = useDispatch();
+    const history = useHistory();
     console.log(user);
 
     const fetchUserDetail = async (id) => {
@@ -30,6 +31,9 @@ const UserDetail =()=> {
 
         return (
             <div className="ui grid container">
+                <div>
+                <button type="button" class="btn btn-primary" onClick={() => history.push("/")} id="back">COME BACK</button>
+            </div>
               {Object.keys(user.users).length === 0 ? (
                 <div>...Loading</div>
               ) : (

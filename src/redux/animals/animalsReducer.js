@@ -1,7 +1,9 @@
 import {
   FETCH_ANIMALS_REQUEST,
   FETCH_ANIMALS_SUCCESS,
-  FETCH_ANIMALS_FAILURE
+  FETCH_ANIMALS_FAILURE,
+  FETCH_ANIMALS_DELETE,
+  FETCH_ANIMALS_ADD
 } from './animalsTypes'
 
 const initialState = {
@@ -29,6 +31,17 @@ const reducer = (state = initialState, action) => {
         animals: [],
         error: action.payload
       }
+      case FETCH_ANIMALS_DELETE:
+        return {
+          loading: false,
+          error: action.payload
+        }
+      case FETCH_ANIMALS_ADD:
+        return {
+          ...state,
+          animals: action.payload,
+          loading: false,
+        }
     default: return state
   }
 }

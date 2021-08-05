@@ -1,12 +1,25 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { fetchAnimals } from '../redux'
+import { fetchAnimals, deleteAnimals } from '../redux'
 import { Link } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 // import './css/Human.css'
 function AnimalsContainer({ animalsData, fetchAnimals }) {
   useEffect(() => {
     fetchAnimals()
   }, [])
+
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const handleDelete = (id) => {
+    if (window.confirm("Are you sure want to Delete the Animal?")) {
+      dispatch( deleteAnimals  (id));
+
+    }
+  }
+
   return animalsData.loading ? (
     <h2>Loading...</h2>
   ) : animalsData.error ? (
@@ -15,20 +28,27 @@ function AnimalsContainer({ animalsData, fetchAnimals }) {
     <div className="container ">
       <h1 className="jumbotron-heading ">Animals</h1>
       <div className="row">
+      <div>
+          <button type="button" class="btn btn-primary" onClick={() => history.push("/addAnimal")}>ADD</button>
+        </div>
         {animalsData &&
           animalsData.animals &&
           animalsData.animals.map(animal =>
                 <div className="col-sm-4" key={animal.id}>
-                  <Link to={`/animal/${animal.id}`}>
+                  
                   <div className="card" >
                     <img src={animal.image} />
                     <div className="card-body">
                       <h5 className="card-title">{animal.name}</h5>
-
+                     
+                 
+                      <Link to={`/animal/${animal.id}`}>
                       <button type="button" className="btn btn-info">View</button>
+                      </Link>
+                      <button type="button" class="btn btn-danger" onClick={() => handleDelete(animal.id)}>Delete</button>
                     </div>
                   </div>
-                  </Link>
+                
                 </div>
           
          )}
