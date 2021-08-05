@@ -29,18 +29,18 @@ export const fetchUsersFailure = error => {
 }
 
 
-export const fetchUsersDelete = ()=> {
+export const fetchUsersDelete = () => {
   return {
     type: FETCH_USER_DELETE
-    
+
   }
 }
 
 
-export const fetchUsersAdd = ()=> {
+export const fetchUsersAdd = () => {
   return {
     type: FETCH_USER_ADD
-    
+
   }
 }
 
@@ -64,13 +64,13 @@ export const fetchUsers = () => {
 
 
 export const deleteUsers = (id) => {
-  
+
   return (dispatch) => {
 
     axios
       .delete(` http://localhost:3000/human/${id}`)
       .then(response => {
-          console.log("res",response);
+        console.log("res", response);
         dispatch(fetchUsersDelete());
         dispatch(fetchUsers());
       })
@@ -84,13 +84,13 @@ export const deleteUsers = (id) => {
 
 
 export const addUsers = (user) => {
-  
+
   return (dispatch) => {
 
     axios
-      .post(` http://localhost:3000/human`,user)
+      .post(` http://localhost:3000/human`, user)
       .then(response => {
-          console.log("res",response);
+        console.log("res", response);
         dispatch(fetchUsersAdd());
         dispatch(fetchUsers());
       })

@@ -84,7 +84,7 @@ export const addFlowers = (flowers) => {
   return (dispatch) => {
 
     axios
-      .post(` http://localhost:3000/flowers`,flowers)
+      .post(` http://localhost:3000/flowers`, flowers)
       .then(response => {
         console.log("res", response);
         dispatch(fetchFlowersAdd());

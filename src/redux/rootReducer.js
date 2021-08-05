@@ -6,8 +6,8 @@ import animalsReducer from './animals/animalsReducer';
 import flowersReducer from './flowers/flowersReducer';
 
 const rootReducer = combineReducers({
-  animal:animalsReducer,
-  travel:travelsReducer,
+  animal: animalsReducer,
+  travel: travelsReducer,
   flower: flowersReducer,
   user: userReducer
 })

@@ -38,7 +38,7 @@ const AddUser = () => {
     return (
 
 
-        <div className ="form" >
+        <div className="form" >
             <h2>ADD USER</h2>
             {error && <h3 style={{ color: "red" }}>{error} </h3>}
             <div>

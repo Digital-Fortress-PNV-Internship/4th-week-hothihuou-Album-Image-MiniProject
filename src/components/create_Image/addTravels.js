@@ -1,10 +1,12 @@
 
 import { React, useState } from 'react';
+import PropTypes from 'prop-types';
+import { textContent } from 'domutils';
 import { useHistory } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { addFlowers } from '../../redux';
+import { addTravels } from '../../redux';
 import '../css/Form.css';
-const AddFlowers = () => {
+const AddTravels = () => {
     const [state, setState] = useState({
         name: "",
         image: "",
@@ -28,19 +30,19 @@ const AddFlowers = () => {
         if (!name || !categories || !image || !description) {
             setError("Please input all input field ")
         } else {
-            dispatch(addFlowers(state));
-            history.push("/flower");
+            dispatch(addTravels(state));
+            history.push("/travel");
             setError("");
         }
     };
     return (
 
 
-        <div className ="form" >
-            <h2>ADD FLOWER</h2>
+        <div className="form" >
+            <h2>ADD TRAVELS</h2>
             {error && <h3 style={{ color: "red" }}>{error} </h3>}
             <div>
-                <button type="button" class="btn btn-primary" onClick={() => history.push("/flower")} id="back">COME BACK</button>
+                <button type="button" class="btn btn-primary" onClick={() => history.push("/travel")} id="back">COME BACK</button>
             </div>
             <form onSubmit={handleSubmit}>
 
@@ -72,4 +74,4 @@ const AddFlowers = () => {
     );
 };
 
-export default AddFlowers;
+export default AddTravels;

@@ -46,7 +46,7 @@ const Flowers = () => {
       <h1 className="jumbotron-heading ">Flowers</h1>
       <div className="row">
         <div>
-        <button type="button" class="btn btn-primary">ADD</button> 
+          <button type="button" class="btn btn-primary">ADD</button>
         </div>
         <form className="form-inline ">
           <input className="form-control " type="search" placeholder="Search" aria-label="Search" onChange={(e) => setSearch(e.target.value)}
@@ -54,7 +54,7 @@ const Flowers = () => {
           <button className="btn btn-outline-success " type="submit">Search</button>
         </form>
 
-        
+
         {filteredFlowers.map((flower, idx) => (
           <FlowersDetail key={idx} {...flower} />
         ))}
@@ -70,25 +70,25 @@ const FlowersDetail = (props) => {
 
   return (
     <>
-     
-        <div className="col-sm-4">
-      
-          <div className="card">
-            <img
-              src={image}
-            />
-            <div className="card-body">
-              <h5 className="card-title">{name}</h5>
-            </div>
-              
-            <Link to={`/flower/${id}`}>
-            <button type="button" className="btn btn-info">View</button>
-            </Link>
-            <button type="button" class="btn btn-danger">Delete</button>
+
+      <div className="col-sm-4">
+
+        <div className="card">
+          <img
+            src={image}
+          />
+          <div className="card-body">
+            <h5 className="card-title">{name}</h5>
           </div>
-          
+
+          <Link to={`/flower/${id}`}>
+            <button type="button" className="btn btn-info">View</button>
+          </Link>
+          <button type="button" class="btn btn-danger">Delete</button>
         </div>
-     
+
+      </div>
+
     </>
   );
 };

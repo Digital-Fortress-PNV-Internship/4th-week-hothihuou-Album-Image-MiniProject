@@ -1,15 +1,14 @@
+/* Header */
 
-  /* Header */
-  .menu  a {
-    color: white;
-    width: auto;
-    font-weight: bolder;
-    font-size: 20px;
-    padding: auto;
-    text-decoration: none;
-    
+.menu a {
+  color: white;
+  width: auto;
+  font-weight: bolder;
+  font-size: 20px;
+  padding: auto;
+  text-decoration: none;
 }
 
-.menu button{
-    border: none;
+.menu button {
+  border: none;
 }

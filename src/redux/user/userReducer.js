@@ -37,12 +37,12 @@ export const reducer = (state = initialState, action) => {
         loading: false,
         error: action.payload
       }
-      case FETCH_USER_ADD:
-        return {
-          ...state,
-          users: action.payload,
-          loading: false,
-        }
+    case FETCH_USER_ADD:
+      return {
+        ...state,
+        users: action.payload,
+        loading: false,
+      }
     default: return state
   }
 }

@@ -87,7 +87,7 @@ export const addAnimals = (animals) => {
   return (dispatch) => {
 
     axios
-      .post(` http://localhost:3000/animals`,animals)
+      .post(` http://localhost:3000/animals`, animals)
       .then(response => {
         console.log("res", response);
         dispatch(fetchAnimalsAdd());

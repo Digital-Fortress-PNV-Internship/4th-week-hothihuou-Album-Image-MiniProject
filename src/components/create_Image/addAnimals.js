@@ -2,9 +2,9 @@
 import { React, useState } from 'react';
 import { useHistory } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { addAnimals  } from '../../redux';
+import { addAnimals } from '../../redux';
 import '../css/Form.css';
-const  AddAnimals = () => {
+const AddAnimals = () => {
     const [state, setState] = useState({
         name: "",
         image: "",
@@ -36,7 +36,7 @@ const  AddAnimals = () => {
     return (
 
 
-        <div className ="form" >
+        <div className="form" >
             <h2>ADD ANIMAL</h2>
             {error && <h3 style={{ color: "red" }}>{error} </h3>}
             <div>

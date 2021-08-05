@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { fetchFlowers, deleteFlowers } from '../redux'
-import './css/Human.css';
+import { fetchFlowers, deleteFlowers } from '../../redux'
+import '../css/Human.css';
 import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
@@ -14,7 +14,7 @@ function FlowersContainer({ flowerData, fetchFlowers }) {
 
   const handleDelete = (id) => {
     if (window.confirm("Are you sure want to Delete the Flowers?")) {
-      dispatch(deleteFlowers (id));
+      dispatch(deleteFlowers(id));
 
     }
   }
@@ -27,8 +27,8 @@ function FlowersContainer({ flowerData, fetchFlowers }) {
     <div className="container ">
       <h1 className="jumbotron-heading ">Flowers</h1>
       <div className="row">
-      <div>
-          <button type="button" class="btn btn-primary" onClick={() => history.push("/addFlower")}>ADD</button>
+        <div>
+          <button type="button" class="btn btn-outline-primary" onClick={() => history.push("/addFlower")}>ADD</button>
         </div>
         {flowerData &&
           flowerData.flowers &&
@@ -39,9 +39,9 @@ function FlowersContainer({ flowerData, fetchFlowers }) {
                 <div className="card-body">
                   <h5 className="card-title">{flower.name}</h5>
                   <Link to={`/flower/${flower.id}`}>
-                    <button type="button" className="btn btn-info">View</button>
+                    <button type="button" class="btn btn-outline-info">View</button>
                   </Link>
-                  <button type="button" class="btn btn-danger" onClick={() => handleDelete(flower.id)}>Delete</button>
+                  <button type="button" class="btn btn-outline-danger" onClick={() => handleDelete(flower.id)}>Delete</button>
                 </div>
               </div>
             </div>

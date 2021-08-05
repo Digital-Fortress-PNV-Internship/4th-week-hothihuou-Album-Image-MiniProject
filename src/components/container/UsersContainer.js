@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
-import { fetchUsers, deleteUsers } from '../redux'
+import { fetchUsers, deleteUsers } from '../../redux'
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import './css/Human.css'
+import '../css/Human.css'
 
 
 function UsersContainer({ userData, fetchUsers }) {
@@ -29,7 +29,7 @@ function UsersContainer({ userData, fetchUsers }) {
       <h1 className="jumbotron-heading ">Human</h1>
       <div className="row">
         <div>
-          <button type="button" class="btn btn-primary" onClick={() => history.push("/addUser")}>ADD</button>
+          <button type="button" class="btn btn-outline-primary" onClick={() => history.push("/addUser")}>ADD</button>
         </div>
 
         {userData &&
@@ -44,9 +44,9 @@ function UsersContainer({ userData, fetchUsers }) {
                   <h5 className="card-title">{user.name}</h5>
 
                   <Link to={`/user/${user.id}`}>
-                    <button type="button" className="btn btn-info">View</button>
+                    <button type="button" class="btn btn-outline-info">View</button>
                   </Link>
-                  <button type="button" class="btn btn-danger" onClick={() => handleDelete(user.id)}>Delete</button>
+                  <button type="button" class="btn btn-outline-danger" onClick={() => handleDelete(user.id)}>Delete</button>
                 </div>
               </div>
 
