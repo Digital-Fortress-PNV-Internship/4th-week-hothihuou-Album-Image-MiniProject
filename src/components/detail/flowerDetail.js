@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import PropTypes from 'prop-types';
+
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,18 +14,19 @@ const FlowersDetail = () => {
   const dispatch = useDispatch();
   console.log(flower);
 
-  const fetchflowerDetail = async () => {
-    const response = await axios
-      .get(`http://localhost:3000/flowers/${flowerId}`)
-    // .catch((err) => {
-    //   console.log("Err: ", err);
-    // });
-    dispatch(fetchFlowersSuccess(response.data));
-  };
+
 
   useEffect(() => {
+    const fetchflowerDetail = async () => {
+      const response = await axios
+        .get(`http://localhost:3000/flowers/${flowerId}`)
+      // .catch((err) => {
+      //   console.log("Err: ", err);
+      // });
+      dispatch(fetchFlowersSuccess(response.data));
+    };
     if (flowerId && flowerId !== "") fetchflowerDetail(flowerId);
-  }, [flowerId]);
+  }, [dispatch, flowerId]);
   console.log('xxx', Object.keys(flower));
   return (
     <div className="ui grid container">
@@ -38,7 +39,7 @@ const FlowersDetail = () => {
             <div className="ui vertical divider">Details</div>
             <div className="middle aligned row">
               <div className="column lp">
-                <img className="ui fluid image" src={flower.flowers.image} />
+                <img className="ui fluid image" src={flower.flowers.image} alt=""/>
               </div>
               <div className="column rp">
                 <h1>{flower.flowers.name}</h1>

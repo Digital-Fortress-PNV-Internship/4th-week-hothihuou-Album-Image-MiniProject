@@ -7,8 +7,8 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 function FlowersContainer({ flowerData, fetchFlowers }) {
   useEffect(() => {
-    fetchFlowers()
-  }, [])
+    fetchFlowers();
+  }, [fetchFlowers])
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -35,7 +35,7 @@ function FlowersContainer({ flowerData, fetchFlowers }) {
           flowerData.flowers.map(flower =>
             <div className="col-sm-4">
               <div className="card">
-                <img src={flower.image} />
+                <img src={flower.image} alt="" />
                 <div className="card-body">
                   <h5 className="card-title">{flower.name}</h5>
                   <Link to={`/flower/${flower.id}`}>

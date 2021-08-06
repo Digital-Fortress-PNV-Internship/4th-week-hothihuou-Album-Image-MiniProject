@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
@@ -13,21 +12,23 @@ const UserDetail = () => {
 
   const dispatch = useDispatch();
   const history = useHistory();
+
   console.log(user);
 
-  const fetchUserDetail = async (id) => {
 
-    const response = await axios
-      .get(`http://localhost:3000/human/${id}`)
-      .catch((err) => {
-        console.log("Err: ", err);
-      });
-    dispatch(fetchUsersSuccess(response.data));
-  };
 
   useEffect(() => {
+    const fetchUserDetail = async (id) => {
+
+      const response = await axios
+        .get(`http://localhost:3000/human/${id}`)
+        .catch((err) => {
+          console.log("Err: ", err);
+        });
+      dispatch(fetchUsersSuccess(response.data));
+    };
     if (userId && userId !== "") fetchUserDetail(userId);
-  }, [userId]);
+  }, [dispatch, userId]);
 
   return (
     <div className="ui grid container">
@@ -42,7 +43,7 @@ const UserDetail = () => {
             <div className="ui vertical divider">Details </div>
             <div className="middle aligned row">
               <div className="column lp">
-                <img className="ui fluid image" src={user.users.image} />
+                <img className="ui fluid image" src={user.users.image} alt="" />
               </div>
               <div className="column rp">
                 <h1>{user.users.name}</h1>

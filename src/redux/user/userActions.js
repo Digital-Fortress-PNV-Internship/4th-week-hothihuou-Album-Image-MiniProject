@@ -32,7 +32,6 @@ export const fetchUsersFailure = error => {
 export const fetchUsersDelete = () => {
   return {
     type: FETCH_USER_DELETE
-
   }
 }
 
@@ -49,7 +48,7 @@ export const fetchUsers = () => {
   return (dispatch) => {
     dispatch(fetchUsersRequest())
     axios
-      .get('  http://localhost:3000/human')
+      .get('http://localhost:3000/human')
       .then(response => {
         // response.data is the users
         const users = response.data

@@ -1,21 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 
-import Header from './components/Header/Header';
+import Header from './components/header/header';
 
-import UsersContainer from './components/container/UsersContainer';
+import UsersContainer from './components/containers/UsersContainer';
 import Footer from './components/footer/footer';
-import Slider from './components/container/Slide';
-import AnimalsContainer from './components/container/AnimalsContainer';
-import FlowersContainer from './components/container/FlowersContainer';
-import TravelContainer from './components/container/TravelContainer';
+import Slider from './components/containers/Slide';
+import AnimalsContainer from './components/containers/AnimalsContainer';
+import FlowersContainer from './components/containers/FlowersContainer';
+import TravelContainer from './components/containers/TravelContainer';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 
@@ -65,4 +64,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;      

@@ -1,7 +1,5 @@
 
 import { React, useState } from 'react';
-import PropTypes from 'prop-types';
-import { textContent } from 'domutils';
 import { useHistory } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addTravels } from '../../redux';

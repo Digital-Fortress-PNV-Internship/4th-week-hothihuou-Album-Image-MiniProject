@@ -1,7 +1,5 @@
 
 import { React, useState } from 'react';
-import PropTypes from 'prop-types';
-import { textContent } from 'domutils';
 import { useHistory } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addUsers } from '../../redux';
@@ -13,7 +11,9 @@ const AddUser = () => {
         categories: "",
         description: ""
     });
+
     const [error, setError] = useState("");
+
     const history = useHistory();
     const dispatch = useDispatch();
 
@@ -25,6 +25,7 @@ const AddUser = () => {
         setState({ ...state, [name]: value });
 
     };
+
     const handleSubmit = (e) => {
         e.preventDefault()
         if (!name || !categories || !image || !description) {

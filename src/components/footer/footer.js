@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
 class Footer extends Component {
 
     render() {
@@ -14,7 +12,7 @@ class Footer extends Component {
                             <div className="row">
                                 <div className="col-lg-2 col-md-2 mb-4 mb-md-0">
                                     <div className="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
-                                        <img src="https://mdbootstrap.com/img/new/fluid/city/113.jpg" className="w-100" />
+                                        <img src="https://mdbootstrap.com/img/new/fluid/city/113.jpg" className="w-100" alt=""/>
                                         <a href="#!">
                                             <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }} />
                                         </a>
@@ -22,7 +20,7 @@ class Footer extends Component {
                                 </div>
                                 <div className="col-lg-2 col-md-2 mb-4 mb-md-0">
                                     <div className="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
-                                        <img src="https://mdbootstrap.com/img/new/fluid/city/111.jpg" className="w-100" />
+                                        <img src="https://mdbootstrap.com/img/new/fluid/city/111.jpg" className="w-100" alt=""/>
                                         <a href="#!">
                                             <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }} />
                                         </a>
@@ -30,7 +28,7 @@ class Footer extends Component {
                                 </div>
                                 <div className="col-lg-2 col-md-2 mb-4 mb-md-0">
                                     <div className="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
-                                        <img src="https://mdbootstrap.com/img/new/fluid/city/112.jpg" className="w-100" />
+                                        <img src="https://mdbootstrap.com/img/new/fluid/city/112.jpg" className="w-100" alt=""/>
                                         <a href="#!">
                                             <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }} />
                                         </a>
@@ -38,7 +36,7 @@ class Footer extends Component {
                                 </div>
                                 <div className="col-lg-2 col-md-2 mb-4 mb-md-0">
                                     <div className="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
-                                        <img src="https://mdbootstrap.com/img/new/fluid/city/114.jpg" className="w-100" />
+                                        <img src="https://mdbootstrap.com/img/new/fluid/city/114.jpg" className="w-100" alt=""/>
                                         <a href="#!">
                                             <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }} />
                                         </a>
@@ -46,7 +44,7 @@ class Footer extends Component {
                                 </div>
                                 <div className="col-lg-2 col-md-2 mb-4 mb-md-0">
                                     <div className="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
-                                        <img src="https://mdbootstrap.com/img/new/fluid/city/115.jpg" className="w-100" />
+                                        <img src="https://mdbootstrap.com/img/new/fluid/city/115.jpg" className="w-100" alt=""/>
                                         <a href="#!">
                                             <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }} />
                                         </a>
@@ -54,7 +52,7 @@ class Footer extends Component {
                                 </div>
                                 <div className="col-lg-2 col-md-2 mb-4 mb-md-0">
                                     <div className="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
-                                        <img src="https://mdbootstrap.com/img/new/fluid/city/116.jpg" className="w-100" />
+                                        <img src="https://mdbootstrap.com/img/new/fluid/city/116.jpg" className="w-100" alt=""/>
                                         <a href="#!">
                                             <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }} />
                                         </a>
@@ -68,7 +66,7 @@ class Footer extends Component {
                     {/* Copyright */}
                     <div className="text-center p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
                         © 12052020:
-                        <a className="text-white" href="">Album of Huou</a>
+                        <p>Album of Huou</p>
                     </div>
                     {/* Copyright */}
                 </footer>

@@ -9,21 +9,25 @@ import '../css/Human.css'
 
 function UsersContainer({ userData, fetchUsers }) {
   useEffect(() => {
-    fetchUsers()
-  }, [])
+    fetchUsers();
+  }, [fetchUsers])
+
+
   const dispatch = useDispatch();
+
   const history = useHistory();
 
   const handleDelete = (id) => {
     if (window.confirm("Are you sure want to Delete the user?")) {
       dispatch(deleteUsers(id));
-
     }
   }
+
   return userData.loading ? (
-    <h2>Loading</h2>
+    <h2>Loading...</h2>
   ) : userData.error ? (
     <h2>{userData.error}</h2>
+
   ) : (
     <div className="container ">
       <h1 className="jumbotron-heading ">Human</h1>
@@ -39,20 +43,19 @@ function UsersContainer({ userData, fetchUsers }) {
             <div className="col-sm-4" >
 
               <div className="card" >
-                <img src={user.image} />
+                <img src={user.image} alt="" />
                 <div className="card-body">
                   <h5 className="card-title">{user.name}</h5>
 
                   <Link to={`/user/${user.id}`}>
                     <button type="button" class="btn btn-outline-info">View</button>
                   </Link>
+
                   <button type="button" class="btn btn-outline-danger" onClick={() => handleDelete(user.id)}>Delete</button>
                 </div>
               </div>
 
             </div>
-
-
           )}
       </div>
     </div>

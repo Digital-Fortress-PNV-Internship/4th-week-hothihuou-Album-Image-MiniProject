@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
@@ -13,18 +12,19 @@ const TravelDetail = () => {
   const dispatch = useDispatch();
   console.log(travel);
 
-  const fetchTravelDetail = async () => {
-    const response = await axios
-      .get(`http://localhost:3000/travels/${travelId}`)
-    // .catch((err) => {
-    //   console.log("Err: ", err);
-    // });
-    dispatch(fetchTravelsSuccess(response.data));
-  };
 
   useEffect(() => {
+    const fetchTravelDetail = async () => {
+      const response = await axios
+        .get(`http://localhost:3000/travels/${travelId}`)
+      // .catch((err) => {
+      //   console.log("Err: ", err);
+      // });
+      dispatch(fetchTravelsSuccess(response.data));
+    };
+
     if (travelId && travelId !== "") fetchTravelDetail(travelId);
-  }, [travelId]);
+  }, [dispatch, travelId]);
   console.log('xxx', Object.keys(travel));
   return (
     <div className="ui grid container">
@@ -37,7 +37,7 @@ const TravelDetail = () => {
             <div className="ui vertical divider">Details </div>
             <div className="middle aligned row">
               <div className="column lp">
-                <img className="ui fluid image" src={travel.travels.image} />
+                <img className="ui fluid image" src={travel.travels.image} alt="" />
               </div>
               <div className="column rp">
                 <h1>{travel.travels.name}</h1>

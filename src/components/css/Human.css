@@ -24,8 +24,17 @@
     transform: scale(1.05);
 }
 
-.btn .btn-info {
-    height: 15px !important;
-    width: 20px !important;
-    margin-left: 5px !important;
+/* .btn{
+    /* height: 15px !important;
+    width: 20px !important; */
+    /* margin-left: 15px !important; */
+/* }  */
+
+.card-body .btn{
+    margin-left: 15px !important;
+    font-size: small;
+    margin-top: 15px;
+    height: 30px;
+    text-align: center;
 }
+

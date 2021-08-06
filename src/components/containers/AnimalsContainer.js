@@ -7,10 +7,11 @@ import { useHistory } from 'react-router-dom';
 import '../css/Human.css'
 function AnimalsContainer({ animalsData, fetchAnimals }) {
   useEffect(() => {
-    fetchAnimals()
-  }, [])
+    fetchAnimals();
+  }, [fetchAnimals]);
 
   const dispatch = useDispatch();
+
   const history = useHistory();
 
   const handleDelete = (id) => {
@@ -28,7 +29,7 @@ function AnimalsContainer({ animalsData, fetchAnimals }) {
     <div className="container ">
       <h1 className="jumbotron-heading ">Animals</h1>
       <div className="row">
-        <div>
+        <div className="comeback">
           <button type="button" class="btn btn-outline-primary" onClick={() => history.push("/addAnimal")}>ADD</button>
         </div>
         {animalsData &&
@@ -37,7 +38,7 @@ function AnimalsContainer({ animalsData, fetchAnimals }) {
             <div className="col-sm-4" key={animal.id}>
 
               <div className="card" >
-                <img id="image-animal" src={animal.image} />
+                <img src={animal.image} alt=""></img>
                 <div className="card-body">
                   <h5 className="card-title">{animal.name}</h5>
 

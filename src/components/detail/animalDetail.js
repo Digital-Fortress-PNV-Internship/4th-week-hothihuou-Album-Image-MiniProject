@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import PropTypes from 'prop-types';
+
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,25 +7,27 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchAnimalsSuccess } from '../../redux/animals/animalsActions';
 
 const AnimalsDetail = () => {
+  // Lấy dữ liệu từ redux
   const animal = useSelector((state => state.animal))
-
+  //
   const { animalId } = useParams();
 
   const dispatch = useDispatch();
   console.log(animal);
 
-  const fetchAnimalDetail = async () => {
-    const response = await axios
-      .get(`http://localhost:3000/animals/${animalId}`)
-    // .catch((err) => {
-    //   console.log("Err: ", err);
-    // });
-    dispatch(fetchAnimalsSuccess(response.data));
-  };
+
 
   useEffect(() => {
+    const fetchAnimalDetail = async () => {
+      const response = await axios
+        .get(`http://localhost:3000/animals/${animalId}`)
+      // .catch((err) => {
+      //   console.log("Err: ", err);
+      // });
+      dispatch(fetchAnimalsSuccess(response.data));
+    };
     if (animalId && animalId !== "") fetchAnimalDetail(animalId);
-  }, [animalId]);
+  }, [animalId, dispatch]);
   console.log('xxx', Object.keys(animal));
   return (
     <div className="ui grid container">
@@ -38,7 +40,7 @@ const AnimalsDetail = () => {
             <div className="ui vertical divider">Details </div>
             <div className="middle aligned row">
               <div className="column lp">
-                <img className="ui fluid image" src={animal.animals.image} />
+                <img className="ui fluid image" src={animal.animals.image} alt="" />
               </div>
               <div className="column rp">
                 <h1>{animal.animals.name}</h1>

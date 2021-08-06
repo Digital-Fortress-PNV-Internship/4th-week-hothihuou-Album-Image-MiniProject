@@ -22,13 +22,6 @@
       "description": "Real love is a mix of feelings, emotions and convictions, and the last ones don't come from the heart but from our preferences and the experiences we have in our life with our parents, brothers, friends, and even our expectations!  If you find the way to love in a healthy way it is great, but it will never be perfect as the people who are willing to sell things to us will like us to believe. So be ready for some problems as well. "
     },
     {
-      "id": 4,
-      "name": "Brenna",
-      "image": "https://images.unsplash.com/photo-1574788170925-c2586e1c510d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-      "categories": "human",
-      "description": "Real love is a mix of feelings, emotions and convictions, and the last ones don't come from the heart but from our preferences and the experiences we have in our life with our parents, brothers, friends, and even our expectations!  If you find the way to love in a healthy way it is great, but it will never be perfect as the people who are willing to sell things to us will like us to believe. So be ready for some problems as well. "
-    },
-    {
       "id": 5,
       "name": "Ceridwen",
       "image": "https://images.unsplash.com/photo-1618507246311-0af4030bee43?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTJ8NDg1MjkyMnx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
@@ -164,13 +157,6 @@
       "id": 5,
       "name": "ZINNIAS",
       "image": "https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/zinnias-assorted-edit.jpg?itok=FA-Rqlos",
-      "categories": "flowers",
-      "description": "Ralph Waldo Emerson once said, “Many eyes go through the meadow, but few see the flowers in it.” It’s easy to get caught up in all of the noise and chaos that surrounds us daily—we often forget to stop and appreciate the beautiful (often little) things that are consumed by the noise. Even though we’re in the midst of fall at the moment, it still doesn’t hurt to take a note from the old proverb: “take time to smell the roses.” That’s why we’ve compiled the very best flower quotes right here to inspire growth and hope!"
-    },
-    {
-      "id": 6,
-      "name": "SUNFLOWERS",
-      "image": "https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/sunflower-1627193_1920.jpg?itok=yc2JGIPb",
       "categories": "flowers",
       "description": "Ralph Waldo Emerson once said, “Many eyes go through the meadow, but few see the flowers in it.” It’s easy to get caught up in all of the noise and chaos that surrounds us daily—we often forget to stop and appreciate the beautiful (often little) things that are consumed by the noise. Even though we’re in the midst of fall at the moment, it still doesn’t hurt to take a note from the old proverb: “take time to smell the roses.” That’s why we’ve compiled the very best flower quotes right here to inspire growth and hope!"
     }

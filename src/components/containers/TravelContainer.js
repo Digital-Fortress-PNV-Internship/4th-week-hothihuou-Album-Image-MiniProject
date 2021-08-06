@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 function TravelsContainer({ travelsData, fetchTravels }) {
   useEffect(() => {
     fetchTravels()
-  }, []);
+  }, [fetchTravels]);
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -30,7 +30,7 @@ function TravelsContainer({ travelsData, fetchTravels }) {
       <h1 className="jumbotron-heading ">Travels </h1>
       <div className="row">
         <div>
-        <button type="button" class="btn btn-outline-primary" onClick={() => history.push("/addTravel")}>ADD</button>
+          <button type="button" class="btn btn-outline-primary" onClick={() => history.push("/addTravel")}>ADD</button>
         </div>
 
         {travelsData &&
@@ -39,13 +39,13 @@ function TravelsContainer({ travelsData, fetchTravels }) {
             <div className="col-sm-4" >
 
               <div className="card">
-                <img src={travel.image} />
+                <img src={travel.image} alt="" />
                 <div className="card-body">
                   <h5 className="card-title">{travel.name}</h5>
 
 
                   <Link to={`/travel/${travel.id}`}>
-                  <button type="button" class="btn btn-outline-info">View</button>
+                    <button type="button" class="btn btn-outline-info">View</button>
                   </Link>
                   <button type="button" class="btn btn-outline-danger" onClick={() => handleDelete(travel.id)} >Delete</button>
                 </div>

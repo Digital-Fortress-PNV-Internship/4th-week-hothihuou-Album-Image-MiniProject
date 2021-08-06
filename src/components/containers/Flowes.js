@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
 import axios from "axios";
 import { Link } from 'react-router-dom';
 
@@ -74,9 +73,7 @@ const FlowersDetail = (props) => {
       <div className="col-sm-4">
 
         <div className="card">
-          <img
-            src={image}
-          />
+          <img src={image} alt="" />
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
           </div>
